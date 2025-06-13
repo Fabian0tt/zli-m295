@@ -1,6 +1,7 @@
 import express from "express";
 import { randomUUID } from "node:crypto"
 
+
 const app = express();
 const port = 3000;
 
@@ -79,6 +80,7 @@ let books = [
     }
 ];
 let lends =[];
+
 app.get('/books',(req, res)=> {
     res.json(books)
 });
@@ -182,6 +184,7 @@ app.delete("/lends/:id", (req, res) => {
     res.send(lend);
 
 });
+
 
 app.listen(port, () => {
     console.log(`Server läuft auf http://localhost:${port}`);
